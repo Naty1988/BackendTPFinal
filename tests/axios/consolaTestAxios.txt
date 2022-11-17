@@ -1,0 +1,129 @@
+PS C:\Users\Jonatan\Desktop\3EntregaProyecto Final> npm test
+
+> fetch@1.0.0 test C:\Users\Jonatan\Desktop\3EntregaProyecto Final
+> mocha tests/axios/index.js
+
+
+
+  0 passing (2ms)
+
+{
+  data: [
+    {
+      _id: '636aef729afe497ab3fe4af8',
+      title: 'Tijera',
+      price: 120,
+      stock: 12,
+      __v: 0
+    },
+    {
+      _id: '636befcb5839684b43d96629',
+      title: 'Hojas',
+      price: 300,
+      stock: 30,
+      __v: 0
+    },
+    {
+      _id: '637014d88f77253ed73ed903',
+      title: 'Cartulina',
+      price: 300,
+      stock: 30,
+      __v: 0
+    },
+    {
+      _id: '63702770b2e81db2894ad3bb',
+      title: 'Goma roja',
+      price: 800,
+      stock: 10,
+      __v: 0
+    },
+    { _id: '1', title: 'Goma rosa', price: 800, stock: 100, __v: 0 },
+    { _id: '5', title: 'cinta', price: 203, stock: 21, __v: 0 },
+    { _id: '4', title: 'Cartulina', price: 200, stock: 20, __v: 0 },
+    {
+      _id: '6',
+      title: 'Cartulina opaca',
+      price: 200,
+      stock: 20,
+      __v: 0
+    }
+  ],
+  message: 'Mostrando todos los productos',
+  error: false,
+  errorCode: 0
+}
+
+-----------------------------------------
+
+PS C:\Users\Jonatan\Desktop\3EntregaProyecto Final> npm test
+
+> fetch@1.0.0 test C:\Users\Jonatan\Desktop\3EntregaProyecto Final
+> mocha tests/axios/index.js
+
+
+
+  0 passing (3ms)
+
+response.data {"_id":"7","title":"Cartulina con brillitos","price":"400","stock":"40"}
+
+-----------------------------------------
+
+PS C:\Users\Jonatan\Desktop\3EntregaProyecto Final> npm test
+
+> fetch@1.0.0 test C:\Users\Jonatan\Desktop\3EntregaProyecto Final
+> mocha tests/axios/index.js
+
+
+
+  0 passing (1ms)
+
+{
+  data: {
+    _id: '7',
+    title: 'Cartulina con brillitos',
+    price: 400,
+    stock: 40,
+    __v: 0
+  },
+  message: 'Producto encontrado por id',
+  error: false,
+  errorCode: 0
+}
+
+-----------------------------------------
+
+PS C:\Users\Jonatan\Desktop\3EntregaProyecto Final> npm test
+
+> fetch@1.0.0 test C:\Users\Jonatan\Desktop\3EntregaProyecto Final
+> mocha tests/axios/index.js
+
+
+
+  0 passing (2ms)
+
+{ data: null, message: 'Product deleted', error: false, errorCode: 0 }
+
+-----------------------------------------
+
+PS C:\Users\Jonatan\Desktop\3EntregaProyecto Final> npm test
+
+> fetch@1.0.0 test C:\Users\Jonatan\Desktop\3EntregaProyecto Final
+> mocha tests/axios/index.js
+
+
+
+  0 passing (2ms)
+
+{
+  data: {
+    acknowledged: true,
+    modifiedCount: 1,
+    upsertedId: null,
+    upsertedCount: 0,
+    matchedCount: 1
+  },
+  message: 'Product updated',
+  error: false,
+  errorCode: 0
+}
+Ruta: /product/id Metodo: GET - Actualizando producto

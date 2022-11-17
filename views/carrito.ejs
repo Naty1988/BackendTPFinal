@@ -1,0 +1,30 @@
+<h1>Carrito de compras</h1>
+
+
+<% if(carritoPorId.length) { %>
+    <ul>
+
+        <% carritoPorId.forEach(cart=> { %>
+            <li>
+                userId: <%= cart.user %> <br>
+
+            </li>
+
+            <% cart.products.forEach(c=> { %>
+                <li>
+                    name: <%= c.name %> <br>
+                        price: <%= c.price %> <br>
+                            img: <%= c.img %> <br>
+                </li>
+                <% }) %>
+            <% }) %>
+    </ul>
+    <% } else { %>
+        <p style="color:red;"> No se encontraron carritos </p>
+        <% } %>
+
+            <button onclick="mandarWP()">Confirmar compra</button>
+
+            <script>
+                
+            </script>

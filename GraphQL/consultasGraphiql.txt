@@ -1,0 +1,102 @@
+mutation createProduct {
+  createProduct(data: {title: "Pepe", price: 35, stock: 9}) {
+    title price stock id
+  }
+}
+RETORNA: 
+{
+  "data": {
+    "createProduct": {
+      "title": "Prodcut2",
+      "price": 35,
+      "stock": 9,
+      "id": "c9329a729e1c1a708572"
+    }
+  }
+}
+-------------------
+{
+  getProduct(id: "9441a1307bbad1bff0b1") {
+      title price stock id
+  }
+}
+RETORNA: 
+{
+  "data": {
+    "getProduct": {
+      "title": "Prodcut2",
+      "price": 35,
+      "stock": 9,
+      "id": "c9329a729e1c1a708572"
+    }
+  }
+}
+--------------------
+mutation deleteProduct {
+  deleteProduct(id: "9441a1307bbad1bff0b1") {
+     id
+  }
+}
+
+RETORNA: 
+{
+  "data": {
+    "deleteProduct": {
+      "id": "9441a1307bbad1bff0b1"
+    }
+  }
+}
+-------------------
+
+mutation updateProduct {
+  updateProduct(id: "c9329a729e1c1a708572", data: {title: "Producto actualizado", price: 35, stock: 9}) {
+      title price stock id
+  }
+}
+
+RETORNA: 
+{
+  "data": {
+    "updateProduct": {
+      "title": "Producto actualizado",
+      "price": 35,
+      "stock": 9,
+      "id": "c9329a729e1c1a708572"
+    }
+  }
+}
+
+-------------------
+
+{
+  getProducts{
+  title price stock id
+      }
+  } 
+
+  RETORNA:
+ 
+  {
+  "data": {
+    "getProducts": [
+      {
+        "title": "Pepe",
+        "price": 35,
+        "stock": 9,
+        "id": "461af68b004ba089c102"
+      },
+      {
+        "title": "Producto1",
+        "price": 35,
+        "stock": 9,
+        "id": "c596ef1449495c644483"
+      },
+      {
+        "title": "Producto actualizado",
+        "price": 35,
+        "stock": 9,
+        "id": "c9329a729e1c1a708572"
+      }
+    ]
+  }
+}

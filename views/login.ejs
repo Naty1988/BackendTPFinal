@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login de usuario</h1>
+    <div style="align-items: center; width: fit-content; background-color: lightgrey; display: flex;" id="formularioProductos">
+    
+        <div class="container">
+            <div class="row">
+                <div class="col">
+    
+                </div>
+            </div>
+            <form action="/login" method="POST" id="loginForm">
+                <div class="row">
+                    <div class="col"
+                        style="margin: 10px; display: flex; justify-content: space-between; align-items: center;">
+                        username <input type="text" name="username" >
+                    </div>
+                    <div class="col"
+                        style="margin: 10px; display: flex; justify-content: space-between; align-items: center;">
+                        password <input type="password" name="password" >
+                    </div>
+                    <div class="col"
+                        style="margin: 10px; display: flex; justify-content: space-between; align-items: center;">
+                        <input type="submit" value="Ingresar">
+                    </div>
+                    <a href="/register">IR A REGISTRO</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>

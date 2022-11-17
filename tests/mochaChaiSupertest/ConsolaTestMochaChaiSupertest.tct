@@ -1,0 +1,27 @@
+PS C:\Users\Jonatan\Desktop\3EntregaProyecto Final> npm test
+
+> fetch@1.0.0 test C:\Users\Jonatan\Desktop\3EntregaProyecto Final
+> mocha tests/mochaChaiSupertest/mochaChaiSupertest.js
+
+
+
+  Test over API REST FULL
+    - POST /product
+      ✔ Should return status 200 (121ms)
+      ✔ Response should have id, title, price, stock, __v properties
+      ✔ Should return created product
+    - GET /product
+      ✔ Should return status 200 (74ms)
+      ✔ Response should have id, title, price, stock, __v properties
+    - PUT /product/id
+      ✔ Should return status 200 (110ms)
+      ✔ Response should have id, title, price, stock, __v properties
+      ✔ Should return created product
+    - DELETE /product/id
+      ✔ Should return status 200 (66ms)
+    - GET /product/id
+      ✔ Should return status 200 (56ms)
+      ✔ Response should have id, title, price, stock, __v properties
+
+
+  11 passing (477ms)

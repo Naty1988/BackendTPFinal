@@ -1,0 +1,20 @@
+<h1> mensajes desde plantilla "mensajes"</h1>
+
+<% mensajes.forEach(mj=> { %>
+
+    <li>id: <%= mj.id %>
+    </li>
+    <li>id autor: <%= mj.author.id %>
+    </li>
+    <li>alias: <%= mj.author.alias %>
+    </li>
+    <li>apellido: <%= mj.author.apellido %>
+    </li>
+    <li>avatar:<img src="<%= mj.author.avatar %>" /></li>
+    <li>nombre: <%= mj.author.nombre %>
+    </li>
+    <li>edad: <%= mj.author.edad %>
+    </li>
+    <li>Mensaje: <%= mj.text %>
+    </li>
+    <% }) %>

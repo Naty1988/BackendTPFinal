@@ -1,0 +1,76 @@
+PS C:\Users\Jonatan\Desktop\3EntregaProyecto Final> npm test
+
+> fetch@1.0.0 test C:\Users\Jonatan\Desktop\3EntregaProyecto Final
+> mocha tests/http/http.js
+
+
+
+  0 passing (2ms)
+
+StatusCode: 200
+Ruta: /product Metodo: GET  - Mostrando todos los productos
+{"data":[{"_id":"636aef729afe497ab3fe4af8","title":"Tijera","price":120,"stock":12,"__v":0},{"_id":"636befcb5839684b43d96629","title":"Hojas","price":300,"stock":30,"__v":0},{"_id":"637014d88f77253ed73ed903","title":"Cartulina","price":300,"stock":30,"__v":0},{"_id":"63702770b2e81db2894ad3bb","title":"Goma roja","price":800,"stock":10,"__v":0},{"_id":"1","title":"Goma rosa","price":800,"stock":100,"__v":0},{"_id":"5","title":"cinta","price":203,"stock":21,"__v":0},{"_id":"4","title":"Cartulina","price":200,"stock":20,"__v":0}],"message":"Mostrando todos los productos","error":false,"errorCode":0} 
+
+------------------------------
+
+S C:\Users\Jonatan\Desktop\3EntregaProyecto Final> npm test
+   
+> fetch@1.0.0 test C:\Users\Jonatan\Desktop\3EntregaProyecto Final
+> mocha tests/http/http.js   
+   
+   
+   
+  0 passing (2ms)
+   
+StatusCode: 200
+Ruta: /product/id Metodo: GET - Producto encontrado
+{"data":{"_id":"5","title":"cinta","price":203,"stock":21,"__v":0},"message":"Producto encontrado por id","error":false,"errorCode":0}
+
+------------------------------
+
+PS C:\Users\Jonatan\Desktop\3EntregaProyecto Final> npm test
+
+> fetch@1.0.0 test C:\Users\Jonatan\Desktop\3EntregaProyecto Final
+> mocha tests/http/http.js
+
+
+
+  0 passing (2ms)
+
+Statuscode 200
+Ruta: /product Metodo: POST - Producto actualizado
+{
+  data: { _id: '6', title: 'Cartulina opaca', price: 200, stock: 20, __v: 0 },
+  message: 'Product created',
+  error: false,
+  errorCode: 0
+}
+
+------------------------------
+
+PS C:\Users\Jonatan\Desktop\3EntregaProyecto Final>  npm test
+
+> fetch@1.0.0 test C:\Users\Jonatan\Desktop\3EntregaProyecto Final
+> mocha tests/http/http.js
+
+
+
+  0 passing (3ms)
+
+Statuscode 200
+Ruta: /product Metodo: POST  - Producto actualizado
+{"data":{"acknowledged":true,"modifiedCount":0,"upsertedId":null,"upsertedCount":0,"matchedCount":0},"message":"Product updated","error":false,"errorCode":0}
+
+------------------------------
+
+PS C:\Users\Jonatan\Desktop\3EntregaProyecto Final> npm test
+
+> fetch@1.0.0 test C:\Users\Jonatan\Desktop\3EntregaProyecto Final
+> mocha tests/http/http.js
+
+
+
+  0 passing (2ms)
+
+Statuscode 200
+Ruta: /product Metodo: DELETE - Producto borrado

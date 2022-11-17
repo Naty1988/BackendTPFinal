@@ -1,0 +1,60 @@
+<h1> productos desde plantilla "productos"</h1>
+
+<% if(arrayProductos.length) { %>
+    <ul>
+
+        <% arrayProductos.forEach(pr=> { %>
+            <li>
+                Nombre: <%= pr.name %> <br>
+                    Precio: <%= pr.price %> <br>
+                        URL: <%= pr.img %> <br>
+                            stock: <%= pr.stock %> <br>
+                                <button id="<%= pr._id %>" onclick="agregarProductos(id)">Agregar al carrito</button>
+            </li>
+            <% }) %>
+    </ul>
+    <% } else { %>
+        <p style="color:red;"> No se encontraron datos </p>
+        <% } %>
+
+        <button onclick="agregarAlCarrito(productosSeleccionados)">Agregar al carrito"</button>
+
+            <a href="/">Volver</a>
+
+            <script>
+
+                let productosSeleccionados = []
+
+                function agregarProductos(productId) {
+                    productosSeleccionados.push(productId);
+                    console.log("producto agregado a productosSeleccionados: ", productId)
+                    console.log("productos seleccionados hasta el momento: ", productosSeleccionados)
+                }
+
+                async function  agregarAlCarrito(productId) {
+                    console.log("productos para agregar al carrito: ", productosSeleccionados)
+                    try {
+                        console.log("verificando si existe carrito");
+                                                
+                        const existingCart = await Carrito.findOne({ user: userId });
+                           console.log(existingCart)  
+                                           
+                        if (existingCart) {
+                            await existingCart.save();
+                            console.log("carrito econtrado id: ", existingCart)
+                            existingCart.push(productosSeleccionados);
+                            res.json(existingCart);
+                        } else {
+                            const newCart = new Carrito({ user: userId, products: [productosSeleccionados] });
+                            await newCart.save();
+                            console.log("carrito nuevo id: ", newCart);
+                            newCart.push(productosSeleccionados);
+                            res.json(newCart);
+                        }
+
+                    } catch (err) {
+                        console.log("error en función agregarAlCarrito")
+                    }
+                }
+
+            </script>

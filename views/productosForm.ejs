@@ -1,0 +1,39 @@
+<h1>Ingrese producto</h1>
+<div style="align-items: center; width: fit-content; background-color: lightgrey; display: flex;"
+    id="formularioProductos">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
+        <form action="/agregarProduct" method="POST" id="productsForm">
+            <div class="row">
+                <div class="col"
+                    style="margin: 10px; display: flex; justify-content: space-between; align-items: center;">
+                    name <input type="text" name="name" id="nombreInput">
+                </div>
+
+                <div class="col"
+                    style="margin: 10px; display: flex; justify-content: space-between; align-items: center;">
+                    price <input type="number" name="price" id="precioInput">
+                </div>
+
+                <div class="col"
+                    style="margin: 10px; display: flex; justify-content: space-between; align-items: center;">
+                    img <input type="text" name="img" id="urlInput">
+                </div>
+                <div class="col"
+                    style="margin: 10px; display: flex; justify-content: space-between; align-items: center;">
+                    stock <input type="number" name="stock" id="precioInput">
+                </div>
+
+                <div class="col"
+                    style="margin: 10px; display: flex; justify-content: space-between; align-items: center;">
+                    <input type="submit" value="Agregar producto">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
